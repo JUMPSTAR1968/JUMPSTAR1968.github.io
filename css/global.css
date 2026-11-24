@@ -1,0 +1,149 @@
+
+/* =========================================
+   JS1968 — GLOBAL STYLES
+   ========================================= */
+
+:root {
+  --blue: #06419D;
+  --red: #C3002C;
+  --white: #FFFFFF;
+  --black: #000000;
+  --grey: #999999;
+
+  --creative: #4F2683;
+  --development: #00A1E9;
+  --other: #4D4D4D;
+
+  --teal: #008E97;
+  --gold: #B3995D;
+
+  --font-heading: "Anton", sans-serif;
+  --font-body: "Poppins", sans-serif;
+}
+
+/* RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  color: var(--white);
+  font-family: var(--font-body);
+
+  background-color: #101010;
+
+  background-image:
+    url("../assets/branding/backgrounds/diagonal-bg.webp");
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* TYPOGRAPHY */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+}
+
+h1 {
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+p {
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #00A1E9;
+  outline-offset: 3px;
+}
+
+/* MEDIA */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+video,
+iframe {
+  max-width: 100%;
+}
+
+/* SHARED LAYOUT */
+
+.section-container {
+  width: min(100%, 1300px);
+  margin: 0 auto;
+}
+
+main section {
+  padding: clamp(50px, 7vw, 100px) 6%;
+  scroll-margin-top: 90px;
+}
+
+/* FOOTER */
+
+.site-footer {
+  padding: 26px 20px;
+  background: #000000;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 15px;
+}
+
+/* MOBILE BACKGROUND */
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center top;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
