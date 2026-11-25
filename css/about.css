@@ -1,0 +1,352 @@
+
+/* =========================================
+   JS1968 — ABOUT PAGE
+   ========================================= */
+
+.about-page {
+  width: 100%;
+}
+
+.about-page section {
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  padding: clamp(50px, 6vw, 90px) 24px;
+}
+
+.about-page h2 {
+  margin: 0 0 30px;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+}
+
+.about-page h3 {
+  margin: 0 0 14px;
+}
+
+/* BIOGRAPHY */
+
+.about-hero {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.4fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(25px, 4vw, 60px);
+  min-height: 80vh;
+}
+
+.about-eyebrow {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.about-copy h1 {
+  margin: 12px 0 24px;
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 1.08;
+  text-shadow:
+    3px 3px 0 #06419D,
+    5px 5px 0 #C3002C;
+}
+
+.about-copy p {
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.portrait-gallery {
+  min-width: 0;
+  width: 100%;
+  max-width: 420px;
+  justify-self: center;
+}
+
+.portrait-track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  border-radius: 14px;
+}
+
+.portrait-track figure {
+  flex: 0 0 100%;
+  margin: 0;
+  scroll-snap-align: center;
+}
+
+.portrait-track img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.gallery-caption {
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+}
+
+/* SKILLS */
+
+.skills-list {
+  display: grid;
+  gap: 18px;
+}
+
+.skill-panel {
+  padding: 24px 30px;
+  border: 5px solid;
+  border-radius: 16px;
+}
+
+.skill-panel h3 {
+  font-size: 26px;
+}
+
+.skill-panel ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 26px;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.skill-panel li {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.skill-panel.graphics {
+  background: #250180;
+  border-color: #A580FF;
+}
+
+.skill-panel.motion {
+  background: #C3002C;
+  border-color: #E18096;
+}
+
+.skill-panel.programming {
+  background: #00B8D4;
+  border-color: #80DCEA;
+  color: #071A24;
+}
+
+.skill-panel.other-tools {
+  background: #4D4D4D;
+  border-color: #999999;
+}
+
+.skill-panel.professional {
+  background: #E15A93;
+  border-color: #FAC5E4;
+  color: #171717;
+}
+
+/* EXPERIENCE */
+
+.experience-list {
+  display: grid;
+  gap: 18px;
+}
+
+.experience-card {
+  padding: 24px 30px;
+  border: 5px solid #D9CCAE;
+  border-radius: 14px;
+  background: #B3995D;
+  color: #151515;
+}
+
+.experience-card time {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.experience-card h3 {
+  font-size: 27px;
+  margin: 0 0 6px;
+}
+
+.experience-card h4 {
+  margin: 0 0 12px;
+  font-family: var(--font-body);
+  font-size: 15px;
+}
+
+.experience-card p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* BRANDING */
+
+.branding-section {
+  margin: 0 0 55px;
+}
+
+.branding-section > h3 {
+  font-size: 34px;
+}
+
+.branding-section > p {
+  max-width: 750px;
+  font-size: 15px;
+}
+
+/* TYPOGRAPHY */
+
+.type-showcase {
+  display: grid;
+  gap: 20px;
+  padding: 30px;
+  background: #250180;
+  border: 5px solid #A580FF;
+  border-radius: 16px;
+}
+
+.type-card {
+  min-width: 0;
+}
+
+.type-card h4 {
+  font-size: 23px;
+  margin: 0 0 8px;
+}
+
+.type-card p {
+  margin: 4px 0;
+  overflow-wrap: anywhere;
+}
+
+.type-card.anton {
+  font-family: "Anton", sans-serif;
+}
+
+.type-card.poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.type-card.japanese {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+/* LOGOS */
+
+.logo-showcase {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.logo-showcase figure {
+  min-width: 0;
+  margin: 0;
+  padding: 18px;
+  background: #28183A;
+  border: 3px solid #A580FF;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.logo-showcase img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+
+.logo-showcase figcaption {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+/* COLORS */
+
+.color-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.color-card {
+  min-height: 105px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 4px;
+
+  background: var(--swatch);
+  border: 2px solid #888;
+  border-radius: 10px;
+
+  color: white;
+  text-shadow:
+    0 1px 3px black,
+    0 0 5px black;
+}
+
+.color-card span {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.color-card small {
+  font-size: 12px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .about-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .portrait-gallery {
+    max-width: 380px;
+  }
+
+  .color-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .about-page section {
+    padding: 45px 18px;
+  }
+
+  .about-copy h1 {
+    font-size: clamp(2.7rem, 12vw, 4rem);
+  }
+
+  .skill-panel,
+  .experience-card {
+    padding: 18px;
+  }
+
+  .skill-panel ul {
+    display: block;
+  }
+
+  .logo-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .color-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .type-showcase {
+    padding: 18px;
+  }
+}

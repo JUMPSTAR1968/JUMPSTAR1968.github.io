@@ -1,0 +1,79 @@
+
+/* =========================================
+   JS1968 — MILESTONES PAGE
+   ========================================= */
+
+.milestones-page {
+  min-height: calc(100vh - 84px);
+}
+
+.milestones-section {
+  width: min(100%, 1150px);
+  margin: 0 auto;
+  padding: clamp(60px, 8vw, 110px) 24px;
+}
+
+.milestones-section h1 {
+  margin: 0 0 40px;
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 1.1;
+}
+
+.milestone-list {
+  display: grid;
+  gap: 22px;
+}
+
+.milestone-card {
+  padding: clamp(22px, 4vw, 40px);
+
+  background: #B3995D;
+  border: 5px solid #D9CCAE;
+  border-radius: 16px;
+
+  color: #151515;
+}
+
+.milestone-year {
+  display: inline-block;
+  margin-bottom: 12px;
+
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.milestone-card h2 {
+  margin: 0 0 12px;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.milestone-card p {
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.milestone-subtitle {
+  font-weight: 700;
+}
+
+.milestone-card ul {
+  margin: 18px 0 0;
+  padding-left: 22px;
+}
+
+.milestone-card li {
+  margin-bottom: 12px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .milestones-section {
+    padding: 45px 18px;
+  }
+
+  .milestone-card {
+    padding: 20px;
+  }
+}
