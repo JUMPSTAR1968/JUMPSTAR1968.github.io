@@ -10,38 +10,49 @@
 .about-page section {
   width: min(100%, 1200px);
   margin: 0 auto;
-  padding: clamp(50px, 6vw, 90px) 24px;
+  padding: clamp(60px, 7vw, 100px) 24px;
+  scroll-margin-top: 120px;
 }
 
 .about-page h2 {
   margin: 0 0 30px;
-  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.2;
 }
 
 .about-page h3 {
-  margin: 0 0 14px;
+  margin-top: 0;
 }
 
-/* BIOGRAPHY */
+/* =========================================
+   BIOGRAPHY
+   ========================================= */
 
 .about-hero {
   display: grid;
   grid-template-columns:
-    minmax(0, 1.4fr) minmax(0, 1fr);
+    minmax(0, 1.4fr)
+    minmax(0, 1fr);
+
   align-items: center;
-  gap: clamp(25px, 4vw, 60px);
-  min-height: 80vh;
+  gap: clamp(30px, 4vw, 65px);
+  min-height: 75vh;
+}
+
+.about-copy {
+  min-width: 0;
 }
 
 .about-eyebrow {
-  font-weight: 600;
   font-size: 14px;
+  font-weight: 600;
 }
 
 .about-copy h1 {
   margin: 12px 0 24px;
   font-size: clamp(3rem, 6vw, 6rem);
   line-height: 1.08;
+
   text-shadow:
     3px 3px 0 #06419D,
     5px 5px 0 #C3002C;
@@ -52,42 +63,89 @@
   line-height: 1.9;
 }
 
+/* =========================================
+   PORTRAIT CAROUSEL
+   ========================================= */
+
 .portrait-gallery {
-  min-width: 0;
   width: 100%;
   max-width: 420px;
+  min-width: 0;
   justify-self: center;
 }
 
 .portrait-track {
   display: flex;
-  gap: 16px;
   overflow-x: auto;
+  overscroll-behavior-x: contain;
+
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scroll-padding: 0;
+
   border-radius: 14px;
+  scrollbar-width: thin;
+  scrollbar-color: #06419D #222;
 }
 
-.portrait-track figure {
+.portrait-slide {
   flex: 0 0 100%;
+  min-width: 0;
   margin: 0;
-  scroll-snap-align: center;
+
+  scroll-snap-align: start;
+  scroll-margin-top: 120px;
 }
 
-.portrait-track img {
+.portrait-slide img {
   display: block;
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  object-position: center 25%;
   border-radius: 14px;
 }
 
-.gallery-caption {
-  text-align: center;
-  font-size: 13px;
-  color: #ccc;
+.portrait-controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
 }
 
-/* SKILLS */
+.portrait-controls a {
+  display: grid;
+  place-items: center;
+
+  width: 38px;
+  height: 38px;
+
+  background: #06419D;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.portrait-controls a:hover,
+.portrait-controls a:focus-visible {
+  background: #C3002C;
+}
+
+.gallery-caption {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 13px;
+  color: #FFFFFF;
+}
+
+/* =========================================
+   SKILLS
+   ========================================= */
 
 .skills-list {
   display: grid;
@@ -95,27 +153,36 @@
 }
 
 .skill-panel {
-  padding: 24px 30px;
+  padding: 26px 32px;
   border: 5px solid;
   border-radius: 16px;
+
+  color: #FFFFFF;
 }
 
 .skill-panel h3 {
-  font-size: 26px;
+  margin: 0 0 16px;
+  font-size: 27px;
+  color: #FFFFFF;
 }
 
 .skill-panel ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 26px;
-  padding-left: 20px;
+  gap: 12px 30px;
+
   margin: 0;
+  padding-left: 22px;
 }
 
 .skill-panel li {
+  font-family: var(--font-body);
   font-size: 14px;
   line-height: 1.7;
+  color: #FFFFFF;
 }
+
+/* PANEL COLORS */
 
 .skill-panel.graphics {
   background: #250180;
@@ -128,9 +195,8 @@
 }
 
 .skill-panel.programming {
-  background: #00B8D4;
+  background: #005C6A;
   border-color: #80DCEA;
-  color: #071A24;
 }
 
 .skill-panel.other-tools {
@@ -139,57 +205,72 @@
 }
 
 .skill-panel.professional {
-  background: #E15A93;
+  background: #7B4564;
   border-color: #FAC5E4;
-  color: #171717;
 }
 
-/* EXPERIENCE */
+/* =========================================
+   EXPERIENCES
+   ========================================= */
 
 .experience-list {
   display: grid;
-  gap: 18px;
+  gap: 20px;
 }
 
 .experience-card {
-  padding: 24px 30px;
+  padding: clamp(24px, 4vw, 36px);
+
+  background: #7B5E00;
   border: 5px solid #D9CCAE;
-  border-radius: 14px;
-  background: #B3995D;
-  color: #151515;
+  border-radius: 16px;
+
+  color: #FFFFFF;
 }
 
-.experience-card time {
+.experience-year {
   display: block;
-  margin-bottom: 10px;
-  font-size: 13px;
+  margin-bottom: 12px;
+
+  font-family: var(--font-body);
+  font-size: 14px;
   font-weight: 700;
+  color: #FFFFFF;
 }
 
 .experience-card h3 {
-  font-size: 27px;
-  margin: 0 0 6px;
+  margin: 0 0 8px;
+  font-size: clamp(24px, 3vw, 34px);
+  color: #FFFFFF;
 }
 
 .experience-card h4 {
   margin: 0 0 12px;
+
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFFFFF;
 }
 
 .experience-card p {
   margin: 0;
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #FFFFFF;
 }
 
-/* BRANDING */
+/* =========================================
+   BRANDING
+   ========================================= */
 
 .branding-section {
-  margin: 0 0 55px;
+  margin-bottom: 60px;
 }
 
 .branding-section > h3 {
-  font-size: 34px;
+  font-size: 36px;
+  margin-bottom: 18px;
 }
 
 .branding-section > p {
@@ -197,12 +278,16 @@
   font-size: 15px;
 }
 
-/* TYPOGRAPHY */
+
+/* =========================================
+   TYPOGRAPHY SHOWCASE
+   ========================================= */
 
 .type-showcase {
   display: grid;
-  gap: 20px;
-  padding: 30px;
+  gap: 28px;
+  padding: 32px;
+
   background: #250180;
   border: 5px solid #A580FF;
   border-radius: 16px;
@@ -213,39 +298,59 @@
 }
 
 .type-card h4 {
-  font-size: 23px;
-  margin: 0 0 8px;
+  margin: 0 0 10px;
+  font-size: 26px;
+  line-height: 1.3;
 }
 
 .type-card p {
   margin: 4px 0;
+  font-size: 16px;
+  line-height: 1.7;
   overflow-wrap: anywhere;
 }
 
-.type-card.anton {
+/* ANTON */
+
+.type-card.anton,
+.type-card.anton h4,
+.type-card.anton p {
   font-family: "Anton", sans-serif;
+  font-weight: 400;
 }
 
-.type-card.poppins {
+/* POPPINS */
+
+.type-card.poppins,
+.type-card.poppins h4,
+.type-card.poppins p {
   font-family: "Poppins", sans-serif;
+  font-weight: 700;
 }
 
-.type-card.japanese {
+/* NOTO SANS JP */
+
+.type-card.japanese,
+.type-card.japanese h4,
+.type-card.japanese p {
   font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
 }
 
 /* LOGOS */
 
 .logo-showcase {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 18px;
 }
 
 .logo-showcase figure {
   min-width: 0;
   margin: 0;
-  padding: 18px;
+  padding: 20px;
+
   background: #28183A;
   border: 3px solid #A580FF;
   border-radius: 12px;
@@ -255,13 +360,13 @@
 .logo-showcase img {
   display: block;
   width: 100%;
-  height: 150px;
+  height: 160px;
   object-fit: contain;
 }
 
 .logo-showcase figcaption {
-  margin-top: 12px;
-  font-size: 13px;
+  margin-top: 14px;
+  font-size: 14px;
 }
 
 /* COLORS */
@@ -274,21 +379,22 @@
 }
 
 .color-card {
-  min-height: 105px;
-  padding: 14px;
+  min-height: 110px;
+  padding: 15px;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 4px;
+  gap: 5px;
 
   background: var(--swatch);
   border: 2px solid #888;
   border-radius: 10px;
 
-  color: white;
+  color: #FFFFFF;
   text-shadow:
-    0 1px 3px black,
-    0 0 5px black;
+    0 1px 3px #000,
+    0 0 5px #000;
 }
 
 .color-card span {
@@ -300,11 +406,14 @@
   font-size: 12px;
 }
 
-/* TABLET */
+/* =========================================
+   TABLET
+   ========================================= */
 
 @media (max-width: 900px) {
   .about-hero {
     grid-template-columns: 1fr;
+    min-height: auto;
   }
 
   .portrait-gallery {
@@ -317,11 +426,13 @@
   }
 }
 
-/* MOBILE */
+/* =========================================
+   MOBILE
+   ========================================= */
 
 @media (max-width: 600px) {
   .about-page section {
-    padding: 45px 18px;
+    padding: 48px 18px;
   }
 
   .about-copy h1 {
@@ -330,11 +441,15 @@
 
   .skill-panel,
   .experience-card {
-    padding: 18px;
+    padding: 20px;
   }
 
   .skill-panel ul {
     display: block;
+  }
+
+  .skill-panel li {
+    margin-bottom: 8px;
   }
 
   .logo-showcase {
@@ -347,6 +462,12 @@
   }
 
   .type-showcase {
-    padding: 18px;
+    padding: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portrait-track {
+    scroll-behavior: auto;
   }
 }

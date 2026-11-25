@@ -7,26 +7,30 @@
         content="width=device-width, initial-scale=1.0">
   <meta name="description"
         content="About Jedidiah Lopez, creator of JS1968.">
+
   <title>About | JS1968</title>
 
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/navigation.css">
   <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/branding.css">
 
   <link rel="preconnect"
         href="https://fonts.googleapis.com">
   <link rel="preconnect"
         href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;700&display=swap"
-        rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
   <header class="site-header">
     <a class="site-logo" href="index.html"
        aria-label="JS1968 Homepage">
-      <img src="assets/branding/logos/js1968-header.png"
-           alt="JS1968">
+      <img
+        src="assets/branding/logos/js1968-header.png"
+        alt="JS1968">
     </a>
 
     <nav class="desktop-nav"
@@ -63,11 +67,11 @@
         <h1>JEDIDIAH LOPEZ</h1>
 
         <p>
-          Also known as JUMPSTAR1968, is a Game
-          Developer, Music Producer, and Content
-          Creator whose interests span video games,
-          music, sports, performing arts, and
-          storytelling.
+          Also known as JUMPSTAR1968, Jedidiah Lopez
+          is a Game Developer, Music Producer, and
+          Content Creator whose interests span video
+          games, music, sports, performing arts,
+          and storytelling.
         </p>
 
         <p>
@@ -100,14 +104,39 @@
         </p>
       </div>
 
-      <div class="portrait-gallery">
-        <div class="portrait-track">
-          <figure>
+      <!-- CSS-ONLY PORTRAIT CAROUSEL -->
+      <div class="portrait-gallery"
+           aria-label="Portrait photo gallery">
+
+        <div class="portrait-track" tabindex="0">
+          <figure class="portrait-slide" id="photo-1">
             <img
               src="assets/images/profile/jedidiah-portrait.webp"
               alt="Jedidiah Lopez wearing a cap">
           </figure>
+
+          <figure class="portrait-slide" id="photo-2">
+            <img
+              src="assets/images/profile/jedidiah-photo-2.webp"
+              alt="Second portrait of Jedidiah Lopez"
+              loading="lazy">
+          </figure>
+
+          <figure class="portrait-slide" id="photo-3">
+            <img
+              src="assets/images/profile/jedidiah-photo-3.webp"
+              alt="Third portrait of Jedidiah Lopez"
+              loading="lazy">
+          </figure>
         </div>
+
+        <nav class="portrait-controls"
+             aria-label="Portrait selection">
+          <a href="#photo-1" aria-label="View photo 1">1</a>
+          <a href="#photo-2" aria-label="View photo 2">2</a>
+          <a href="#photo-3" aria-label="View photo 3">3</a>
+        </nav>
+
         <p class="gallery-caption">
           Jedidiah Lopez — JS1968
         </p>
@@ -119,7 +148,6 @@
       <h2>SKILLS</h2>
 
       <div class="skills-list">
-
         <article class="skill-panel graphics">
           <h3>GRAPHICS</h3>
           <ul>
@@ -152,8 +180,10 @@
         <article class="skill-panel other-tools">
           <h3>OTHER TOOLS</h3>
           <ul>
-            <li>BandLab, Waveform</li>
-            <li>Audacity, Adobe Audition</li>
+            <li>BandLab</li>
+            <li>Waveform</li>
+            <li>Audacity</li>
+            <li>Adobe Audition</li>
             <li>Google Workspace</li>
             <li>Microsoft applications</li>
             <li>OBS Studio</li>
@@ -177,18 +207,16 @@
             <li>Intrapersonal Skills</li>
           </ul>
         </article>
-
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
+    <!-- EXPERIENCES -->
     <section class="about-section" id="experience">
-      <h2>EXPERIENCE</h2>
+      <h2>EXPERIENCES</h2>
 
       <div class="experience-list">
-
         <article class="experience-card">
-          <time>2022 – Present</time>
+          <span class="experience-year">2022 – Present</span>
           <h3>Founder & Creative Developer</h3>
           <h4>JUMPSTAR1968</h4>
           <p>
@@ -199,7 +227,7 @@
         </article>
 
         <article class="experience-card">
-          <time>2025 – 2026</time>
+          <span class="experience-year">2025 – 2026</span>
           <h3>Member</h3>
           <h4>PANTHEON — Performing Arts Club</h4>
           <p>
@@ -209,11 +237,9 @@
         </article>
 
         <article class="experience-card">
-          <time>2025 – 2026</time>
+          <span class="experience-year">2025 – 2026</span>
           <h3>Voice-Over Host & Presenter</h3>
-          <h4>
-            SIBOL AGOS 2025 & 2026 GAPAS
-          </h4>
+          <h4>SIBOL AGOS 2025 & 2026 GAPAS</h4>
           <p>
             CIIT Senior High School. Opened the
             awards ceremonies through backstage hosting.
@@ -221,20 +247,20 @@
         </article>
 
         <article class="experience-card">
-          <time>2025</time>
+          <span class="experience-year">2025</span>
           <h3>Member & Host</h3>
           <h4>
             Code Meets Canvas:
             Introductory Visual Coding with p5.js
           </h4>
           <p>
-            Developed promotional materials and digital
-            assets, and hosted the full seminar.
+            Developed promotional materials and
+            digital assets, and hosted the full seminar.
           </p>
         </article>
 
         <article class="experience-card">
-          <time>2025</time>
+          <span class="experience-year">2025</span>
           <h3>Creative Designer, Marshal & Host</h3>
           <h4>Dulaang KayuMutiara</h4>
           <p>
@@ -243,122 +269,455 @@
             hosted the full program.
           </p>
         </article>
-
       </div>
     </section>
 
-    <!-- BRANDING -->
-    <section class="about-section" id="branding">
-      <h2>JS1968 BRANDING</h2>
 
-      <div class="branding-section">
-        <h3>TYPOGRAPHY</h3>
+<!-- =====================================
+     JS1968 BRANDING
+     ===================================== -->
 
-        <div class="type-showcase">
-          <div class="type-card anton">
-            <h4>Anton</h4>
-            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-            <p>0123456789</p>
-          </div>
+<section class="about-section" id="branding">
 
-          <div class="type-card poppins">
-            <h4>Poppins</h4>
-            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-            <p>abcdefghijklmnopqrstuvwxyz</p>
-          </div>
+  <h2>JS1968 BRANDING</h2>
 
-          <div class="type-card japanese">
-            <h4>Noto Sans JP</h4>
-            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-            <p>あいうえお　アイウエオ</p>
-          </div>
-        </div>
+  <!-- TYPOGRAPHY -->
+  <div class="branding-section">
+    <h3>TYPOGRAPHY</h3>
+
+    <div class="type-showcase">
+      <div class="type-card anton">
+        <h4>Anton</h4>
+        <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+        <p>0123456789</p>
       </div>
 
-      <div class="branding-section">
-        <h3>LOGOS</h3>
-        <p>
-          The JS1968 identity includes its button
-          symbol, initials, and JUMPSTAR1968 wordmark.
-        </p>
-
-        <div class="logo-showcase">
-          <figure>
-            <img src="assets/branding/logos/full-color/BTN_FC.png"
-                 alt="JS1968 full-color button symbol">
-            <figcaption>Buttons</figcaption>
-          </figure>
-
-          <figure>
-            <img src="assets/branding/logos/full-color/INI_FC.png"
-                 alt="JS1968 full-color initials">
-            <figcaption>Initials</figcaption>
-          </figure>
-
-          <figure>
-            <img src="assets/branding/logos/full-color/WM_FC.png"
-                 alt="JUMPSTAR1968 full-color wordmark">
-            <figcaption>Wordmark</figcaption>
-          </figure>
-        </div>
+      <div class="type-card poppins">
+        <h4>Poppins</h4>
+        <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+        <p>abcdefghijklmnopqrstuvwxyz</p>
       </div>
 
-      <div class="branding-section">
-        <h3>COLORS</h3>
-        <p>JS1968's primary and supporting colors.</p>
-
-        <div class="color-grid">
-          <div class="color-card" style="--swatch:#C3002C">
-            <span>Red</span><small>#C3002C</small>
-          </div>
-          <div class="color-card" style="--swatch:#FC4C02">
-            <span>Orange</span><small>#FC4C02</small>
-          </div>
-          <div class="color-card" style="--swatch:#F8BC00">
-            <span>Yellow</span><small>#F8BC00</small>
-          </div>
-          <div class="color-card" style="--swatch:#1B990A">
-            <span>Green</span><small>#1B990A</small>
-          </div>
-          <div class="color-card" style="--swatch:#008E97">
-            <span>Teal</span><small>#008E97</small>
-          </div>
-          <div class="color-card" style="--swatch:#00B8D4">
-            <span>Cyan</span><small>#00B8D4</small>
-          </div>
-          <div class="color-card" style="--swatch:#06419D">
-            <span>Blue</span><small>#06419D</small>
-          </div>
-          <div class="color-card" style="--swatch:#4A01FF">
-            <span>Indigo</span><small>#4A01FF</small>
-          </div>
-          <div class="color-card" style="--swatch:#4F2683">
-            <span>Purple</span><small>#4F2683</small>
-          </div>
-          <div class="color-card" style="--swatch:#F11593">
-            <span>Magenta</span><small>#F11593</small>
-          </div>
-          <div class="color-card" style="--swatch:#F58AC8">
-            <span>Pink</span><small>#F58AC8</small>
-          </div>
-          <div class="color-card" style="--swatch:#4B2C1B">
-            <span>Brown</span><small>#4B2C1B</small>
-          </div>
-          <div class="color-card" style="--swatch:#B3995D">
-            <span>Gold</span><small>#B3995D</small>
-          </div>
-          <div class="color-card" style="--swatch:#999999">
-            <span>Grey</span><small>#999999</small>
-          </div>
-          <div class="color-card" style="--swatch:#FFFFFF">
-            <span>White</span><small>#FFFFFF</small>
-          </div>
-          <div class="color-card" style="--swatch:#000000">
-            <span>Black</span><small>#000000</small>
-          </div>
-        </div>
+      <div class="type-card japanese">
+        <h4>Noto Sans JP</h4>
+        <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+        <p>あいうえお　アイウエオ</p>
       </div>
-    </section>
+    </div>
+  </div>
+
+  <!-- LOGOS -->
+  <div class="branding-section">
+    <h3>LOGOS</h3>
+
+    <p>
+      Explore the four official JS1968 logo variations.
+    </p>
+
+    <div class="logo-gallery">
+  <input type="radio" name="logo-variant" id="logo-full-color" checked>
+  <input type="radio" name="logo-variant" id="logo-inverse">
+  <input type="radio" name="logo-variant" id="logo-black">
+  <input type="radio" name="logo-variant" id="logo-white">
+  <div class="logo-tabs" aria-label="Logo variations">
+    <label for="logo-full-color">Full Color</label>
+    <label for="logo-inverse">Inverse</label>
+    <label for="logo-black">Black</label>
+    <label for="logo-white">White</label>
+  </div>
+  <section class="logo-panel full-color" aria-label="Full Color logo variations">
+    <h4>FULL COLOR</h4>
+    <div class="logo-grid">
+      <figure>
+        <img src="assets/branding/logos/full-color/BTN_FC.png" alt="Full Color Buttons, standard" loading="lazy">
+        <figcaption><strong>Buttons</strong><span>Standard</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/full-color/BTN_FC_ND.png" alt="Full Color Buttons, no drop shadow" loading="lazy">
+        <figcaption><strong>Buttons</strong><span>No Drop Shadow</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/full-color/INI_FC.png" alt="Full Color Initials, standard" loading="lazy">
+        <figcaption><strong>Initials</strong><span>Standard</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/full-color/INI_FC_OUT.png" alt="Full Color Initials, outline" loading="lazy">
+        <figcaption><strong>Initials</strong><span>Outline</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/full-color/INI_FC_DROP.png" alt="Full Color Initials, drop shadow" loading="lazy">
+        <figcaption><strong>Initials</strong><span>Drop Shadow</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/full-color/WM_FC.png" alt="Full Color Wordmark, standard" loading="lazy">
+        <figcaption><strong>Wordmark</strong><span>Standard</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/full-color/WM_FC_OUT.png" alt="Full Color Wordmark, outline" loading="lazy">
+        <figcaption><strong>Wordmark</strong><span>Outline</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/full-color/WM_FC_DROP.png" alt="Full Color Wordmark, drop shadow" loading="lazy">
+        <figcaption><strong>Wordmark</strong><span>Drop Shadow</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/full-color/BTN-INI_FC.png" alt="Full Color Buttons + Initials, standard" loading="lazy">
+        <figcaption><strong>Buttons + Initials</strong><span>Standard</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/full-color/BTN-INI_FC_OUT.png" alt="Full Color Buttons + Initials, outline" loading="lazy">
+        <figcaption><strong>Buttons + Initials</strong><span>Outline</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/full-color/BTN-INI_FC_DROP.png" alt="Full Color Buttons + Initials, drop shadow" loading="lazy">
+        <figcaption><strong>Buttons + Initials</strong><span>Drop Shadow</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/full-color/BTN-WM_FC.png" alt="Full Color Buttons + Wordmark, standard" loading="lazy">
+        <figcaption><strong>Buttons + Wordmark</strong><span>Standard</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/full-color/BTN-WM_FC_OUT.png" alt="Full Color Buttons + Wordmark, outline" loading="lazy">
+        <figcaption><strong>Buttons + Wordmark</strong><span>Outline</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/full-color/BTN-WM_FC_DROP.png" alt="Full Color Buttons + Wordmark, drop shadow" loading="lazy">
+        <figcaption><strong>Buttons + Wordmark</strong><span>Drop Shadow</span></figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="logo-panel inverse" aria-label="Inverse logo variations">
+    <h4>INVERSE</h4>
+    <div class="logo-grid">
+      <figure>
+        <img src="assets/branding/logos/inverse/BTN_IN.png" alt="Inverse Buttons, standard" loading="lazy">
+        <figcaption><strong>Buttons</strong><span>Standard</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/inverse/BTN_IN_ND.png" alt="Inverse Buttons, no drop shadow" loading="lazy">
+        <figcaption><strong>Buttons</strong><span>No Drop Shadow</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/inverse/INI_IN.png" alt="Inverse Initials, standard" loading="lazy">
+        <figcaption><strong>Initials</strong><span>Standard</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/inverse/INI_IN_OUT.png" alt="Inverse Initials, outline" loading="lazy">
+        <figcaption><strong>Initials</strong><span>Outline</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/inverse/INI_IN_DROP.png" alt="Inverse Initials, drop shadow" loading="lazy">
+        <figcaption><strong>Initials</strong><span>Drop Shadow</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/inverse/WM_IN.png" alt="Inverse Wordmark, standard" loading="lazy">
+        <figcaption><strong>Wordmark</strong><span>Standard</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/inverse/WM_IN_OUT.png" alt="Inverse Wordmark, outline" loading="lazy">
+        <figcaption><strong>Wordmark</strong><span>Outline</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/inverse/WM_IN_DROP.png" alt="Inverse Wordmark, drop shadow" loading="lazy">
+        <figcaption><strong>Wordmark</strong><span>Drop Shadow</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/inverse/BTN-INI_INV.png" alt="Inverse Buttons + Initials, standard" loading="lazy">
+        <figcaption><strong>Buttons + Initials</strong><span>Standard</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/inverse/BTN-INI_INV_OUT.png" alt="Inverse Buttons + Initials, outline" loading="lazy">
+        <figcaption><strong>Buttons + Initials</strong><span>Outline</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/inverse/BTN-INI_INV_DROP.png" alt="Inverse Buttons + Initials, drop shadow" loading="lazy">
+        <figcaption><strong>Buttons + Initials</strong><span>Drop Shadow</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/inverse/BTN-WM_INV.png" alt="Inverse Buttons + Wordmark, standard" loading="lazy">
+        <figcaption><strong>Buttons + Wordmark</strong><span>Standard</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/inverse/BTN-WM_INV_OUT.png" alt="Inverse Buttons + Wordmark, outline" loading="lazy">
+        <figcaption><strong>Buttons + Wordmark</strong><span>Outline</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/inverse/BTN-WM_INV_DROP.png" alt="Inverse Buttons + Wordmark, drop shadow" loading="lazy">
+        <figcaption><strong>Buttons + Wordmark</strong><span>Drop Shadow</span></figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="logo-panel black" aria-label="Black logo variations">
+    <h4>BLACK</h4>
+    <div class="logo-grid">
+      <figure>
+        <img src="assets/branding/logos/black/BTN_BLACK.png" alt="Black Buttons, standard" loading="lazy">
+        <figcaption><strong>Buttons</strong><span>Standard</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/black/BTN_BLACK_OUT.png" alt="Black Buttons, outline" loading="lazy">
+        <figcaption><strong>Buttons</strong><span>Outline</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/black/INI_BLACK.png" alt="Black Initials, standard" loading="lazy">
+        <figcaption><strong>Initials</strong><span>Standard</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/black/INI_BLACK_OUT.png" alt="Black Initials, outline" loading="lazy">
+        <figcaption><strong>Initials</strong><span>Outline</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/black/INI_BLACK_DROP.png" alt="Black Initials, drop shadow" loading="lazy">
+        <figcaption><strong>Initials</strong><span>Drop Shadow</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/black/WM_BLACK.png" alt="Black Wordmark, standard" loading="lazy">
+        <figcaption><strong>Wordmark</strong><span>Standard</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/black/WM_BLACK_OUT.png" alt="Black Wordmark, outline" loading="lazy">
+        <figcaption><strong>Wordmark</strong><span>Outline</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/black/WM_BLACK_DROP.png" alt="Black Wordmark, drop shadow" loading="lazy">
+        <figcaption><strong>Wordmark</strong><span>Drop Shadow</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/black/BTN-INI_BLACK.png" alt="Black Buttons + Initials, standard" loading="lazy">
+        <figcaption><strong>Buttons + Initials</strong><span>Standard</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/black/BTN-INI_BLKOUT.png" alt="Black Buttons + Initials, outline" loading="lazy">
+        <figcaption><strong>Buttons + Initials</strong><span>Outline</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/black/BTN-INI_BLKDRP.png" alt="Black Buttons + Initials, drop shadow" loading="lazy">
+        <figcaption><strong>Buttons + Initials</strong><span>Drop Shadow</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/black/BTN-WM_BLACK.png" alt="Black Buttons + Wordmark, standard" loading="lazy">
+        <figcaption><strong>Buttons + Wordmark</strong><span>Standard</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/black/BTN-WM_BLKOUT.png" alt="Black Buttons + Wordmark, outline" loading="lazy">
+        <figcaption><strong>Buttons + Wordmark</strong><span>Outline</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/black/BTN-WM_BLKDRP.png" alt="Black Buttons + Wordmark, drop shadow" loading="lazy">
+        <figcaption><strong>Buttons + Wordmark</strong><span>Drop Shadow</span></figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="logo-panel white" aria-label="White logo variations">
+    <h4>WHITE</h4>
+    <div class="logo-grid">
+      <figure>
+        <img src="assets/branding/logos/white/BTN_WHITE.png" alt="White Buttons, standard" loading="lazy">
+        <figcaption><strong>Buttons</strong><span>Standard</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/white/BTN_WHITE_OUT.png" alt="White Buttons, outline" loading="lazy">
+        <figcaption><strong>Buttons</strong><span>Outline</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/white/INI_WHITE.png" alt="White Initials, standard" loading="lazy">
+        <figcaption><strong>Initials</strong><span>Standard</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/white/INI_WHITE_OUT.png" alt="White Initials, outline" loading="lazy">
+        <figcaption><strong>Initials</strong><span>Outline</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/white/INI_WHITE_DROP.png" alt="White Initials, drop shadow" loading="lazy">
+        <figcaption><strong>Initials</strong><span>Drop Shadow</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/white/WM_WHITE.png" alt="White Wordmark, standard" loading="lazy">
+        <figcaption><strong>Wordmark</strong><span>Standard</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/white/WM_WHITE_OUT.png" alt="White Wordmark, outline" loading="lazy">
+        <figcaption><strong>Wordmark</strong><span>Outline</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/white/WM_WHITE_DROP.png" alt="White Wordmark, drop shadow" loading="lazy">
+        <figcaption><strong>Wordmark</strong><span>Drop Shadow</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/white/BTN-INI_WHITE.png" alt="White Buttons + Initials, standard" loading="lazy">
+        <figcaption><strong>Buttons + Initials</strong><span>Standard</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/white/BTN-INI_WHTOUT.png" alt="White Buttons + Initials, outline" loading="lazy">
+        <figcaption><strong>Buttons + Initials</strong><span>Outline</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/white/BTN-INI_WHTDRP.png" alt="White Buttons + Initials, drop shadow" loading="lazy">
+        <figcaption><strong>Buttons + Initials</strong><span>Drop Shadow</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/white/BTN-WM_WHITE.png" alt="White Buttons + Wordmark, standard" loading="lazy">
+        <figcaption><strong>Buttons + Wordmark</strong><span>Standard</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/white/BTN-WM_WHTOUT.png" alt="White Buttons + Wordmark, outline" loading="lazy">
+        <figcaption><strong>Buttons + Wordmark</strong><span>Outline</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/branding/logos/white/BTN-WM_WHTDRP.png" alt="White Buttons + Wordmark, drop shadow" loading="lazy">
+        <figcaption><strong>Buttons + Wordmark</strong><span>Drop Shadow</span></figcaption>
+      </figure>
+    </div>
+  </section>
+</div>
+
+
+  <!-- COLORS -->
+  <div class="branding-section">
+    <h3>COLORS</h3>
+    <p>Dark, Standard, and Light variations.</p>
+
+    <div class="palette-grid">
+
+      <div class="palette-family">
+        <div class="palette-swatches">
+          <span style="background:#620016">#620016</span>
+          <span style="background:#C3002C">#C3002C</span>
+          <span style="background:#E18096">#E18096</span>
+        </div>
+        <h4>Red</h4>
+      </div>
+
+      <div class="palette-family">
+        <div class="palette-swatches">
+          <span style="background:#B83A00">#B83A00</span>
+          <span style="background:#FC4C02">#FC4C02</span>
+          <span style="background:#FEA681">#FEA681</span>
+        </div>
+        <h4>Orange</h4>
+      </div>
+
+      <div class="palette-family">
+        <div class="palette-swatches">
+          <span style="background:#7B5E00">#7B5E00</span>
+          <span style="background:#F8BC00">#F8BC00</span>
+          <span style="background:#FFE27A">#FFE27A</span>
+        </div>
+        <h4>Yellow</h4>
+      </div>
+
+      <div class="palette-family">
+        <div class="palette-swatches">
+          <span style="background:#0E4D05">#0E4D05</span>
+          <span style="background:#1B990A">#1B990A</span>
+          <span style="background:#8DCC85">#8DCC85</span>
+        </div>
+        <h4>Green</h4>
+      </div>
+
+      <div class="palette-family">
+        <div class="palette-swatches">
+          <span style="background:#00474C">#00474C</span>
+          <span style="background:#008E97">#008E97</span>
+          <span style="background:#80C7CB">#80C7CB</span>
+        </div>
+        <h4>Teal</h4>
+      </div>
+
+      <div class="palette-family">
+        <div class="palette-swatches">
+          <span style="background:#005C6A">#005C6A</span>
+          <span style="background:#00B8D4">#00B8D4</span>
+          <span style="background:#80DCEA">#80DCEA</span>
+        </div>
+        <h4>Cyan</h4>
+      </div>
+
+      <div class="palette-family">
+        <div class="palette-swatches">
+          <span style="background:#03285F">#03285F</span>
+          <span style="background:#06419D">#06419D</span>
+          <span style="background:#00A1E9">#00A1E9</span>
+        </div>
+        <h4>Blue</h4>
+      </div>
+
+      <div class="palette-family">
+        <div class="palette-swatches">
+          <span style="background:#250180">#250180</span>
+          <span style="background:#4A01FF">#4A01FF</span>
+          <span style="background:#A580FF">#A580FF</span>
+        </div>
+        <h4>Indigo</h4>
+      </div>
+
+      <div class="palette-family">
+        <div class="palette-swatches">
+          <span style="background:#2B1342">#2B1342</span>
+          <span style="background:#4F2683">#4F2683</span>
+          <span style="background:#AA92C1">#AA92C1</span>
+        </div>
+        <h4>Purple</h4>
+      </div>
+
+      <div class="palette-family">
+        <div class="palette-swatches">
+          <span style="background:#63164D">#63164D</span>
+          <span style="background:#F11593">#F11593</span>
+          <span style="background:#E295CC">#E295CC</span>
+        </div>
+        <h4>Magenta</h4>
+      </div>
+
+      <div class="palette-family">
+        <div class="palette-swatches">
+          <span style="background:#7B4564">#7B4564</span>
+          <span style="background:#F58AC8">#F58AC8</span>
+          <span style="background:#FAC5E4">#FAC5E4</span>
+        </div>
+        <h4>Pink</h4>
+      </div>
+
+      <div class="palette-family">
+        <div class="palette-swatches">
+          <span style="background:#1C1312">#1C1312</span>
+          <span style="background:#4B2C1B">#4B2C1B</span>
+          <span style="background:#8B5837">#8B5837</span>
+        </div>
+        <h4>Brown</h4>
+      </div>
+
+      <div class="palette-family">
+        <div class="palette-swatches">
+          <span style="background:#5A4D2F">#5A4D2F</span>
+          <span style="background:#B3995D">#B3995D</span>
+          <span style="background:#D9CCAE">#D9CCAE</span>
+        </div>
+        <h4>Gold</h4>
+      </div>
+
+      <div class="palette-family">
+        <div class="palette-swatches">
+          <span style="background:#4D4D4D">#4D4D4D</span>
+          <span style="background:#999999">#999999</span>
+          <span style="background:#CCCCCC">#CCCCCC</span>
+        </div>
+        <h4>Grey</h4>
+      </div>
+
+      <div class="palette-family">
+        <div class="palette-swatches neutral-swatches">
+          <span style="background:#FFFFFF">#FFFFFF</span>
+          <span style="background:#000000">#000000</span>
+        </div>
+        <h4>Neutral</h4>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
 
   </main>
 

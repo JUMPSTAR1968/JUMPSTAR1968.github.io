@@ -116,7 +116,10 @@ main section {
   scroll-margin-top: 90px;
 }
 
-/* FOOTER */
+
+/* =========================================
+   JS1968 — FOOTER
+   ========================================= */
 
 .site-footer {
   padding: 26px 20px;
@@ -126,8 +129,12 @@ main section {
 
 .site-footer p {
   margin: 0;
-  font-family: var(--font-heading);
-  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  color: #FFFFFF;
 }
 
 /* MOBILE BACKGROUND */
