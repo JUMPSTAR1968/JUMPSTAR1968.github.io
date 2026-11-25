@@ -40,20 +40,61 @@
 
 /* 02 — INTRODUCTION */
 
+
+/* INTRODUCTION — CENTERED LAYOUT */
+
 .intro-section {
   display: grid;
 
   grid-template-columns:
-    minmax(0, 1.4fr) minmax(0, 1fr);
+    minmax(0, 1.3fr)
+    minmax(0, 1fr);
 
   align-items: center;
-  gap: clamp(30px, 5vw, 75px);
+  justify-content: center;
 
-  width: 100%;
-  min-height: 85vh;
+  gap: clamp(30px, 4vw, 65px);
+
+  width: min(100%, 1150px);
+  min-height: 75vh;
+
+  margin: 0 auto;
+  padding: 70px 30px;
 
   background: transparent;
 }
+
+.intro-content {
+  min-width: 0;
+}
+
+.intro-portrait {
+  width: 100%;
+  max-width: 380px;
+  justify-self: center;
+}
+
+.intro-portrait img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 25%;
+  border-radius: 12px;
+}
+
+@media (max-width: 900px) {
+  .intro-section {
+    grid-template-columns: 1fr;
+    width: min(100%, 650px);
+    padding: 60px 24px;
+  }
+
+  .intro-portrait {
+    max-width: 350px;
+  }
+}
+
 
 .intro-content {
   min-width: 0;
@@ -430,18 +471,54 @@
   font-size: 14px;
 }
 
+
+/* SUPPORT QR CODE GRID */
+
 .support-options {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
+  width: 100%;
+  margin-top: 16px;
 }
 
-.support-options span {
-  padding: 10px 14px;
-  background: #00363A;
+.support-method {
+  min-width: 0;
+  text-align: center;
+}
+
+.support-method h4 {
+  margin: 0 0 10px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.support-method img {
+  display: block;
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  margin: 0 auto;
+  background: white;
+  padding: 6px;
   border-radius: 6px;
-  font-weight: 600;
-  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .support-options {
+    gap: 8px;
+  }
+
+  .support-method h4 {
+    font-size: 12px;
+  }
+
+  .support-method img {
+    padding: 4px;
+  }
 }
 
 /* CONTACT FORM */
