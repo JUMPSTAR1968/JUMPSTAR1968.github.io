@@ -1,0 +1,285 @@
+
+/* =========================================
+   JS1968 — PORTFOLIO
+   ========================================= */
+
+.portfolio-page {
+  min-height: calc(100vh - 84px);
+}
+
+.portfolio-page section {
+  width: min(100%, 1300px);
+  margin: 0 auto;
+  padding: clamp(50px, 7vw, 90px) 24px;
+}
+
+/* CATEGORY LANDING PAGE */
+
+.portfolio-heading {
+  margin: 0 0 35px;
+  font-size: clamp(3rem, 7vw, 6rem);
+  color: #FFFFFF;
+}
+
+.portfolio-intro {
+  max-width: 750px;
+  margin-bottom: 35px;
+  font-size: 16px;
+}
+
+.portfolio-category-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.portfolio-category-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 150px;
+  padding: 30px 40px;
+
+  border: 4px solid rgba(255,255,255,.3);
+  border-radius: 22px;
+
+  color: #FFFFFF;
+  text-decoration: none;
+
+  transition:
+    transform .2s ease,
+    filter .2s ease;
+}
+
+.portfolio-category-card:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.15);
+}
+
+.portfolio-category-card h2 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.portfolio-category-card p {
+  margin: 8px 0 0;
+  font-size: 14px;
+}
+
+.portfolio-category-card .arrow {
+  font-size: 35px;
+}
+
+.portfolio-category-card.creative {
+  background: #4F2683;
+}
+
+.portfolio-category-card.dev {
+  background: #00A1E9;
+}
+
+.portfolio-category-card.other {
+  background: #4D4D4D;
+}
+
+/* PROJECT GALLERY */
+
+.gallery-page {
+  --gallery-color: #4F2683;
+}
+
+.gallery-page.creative {
+  --gallery-color: #4F2683;
+}
+
+.gallery-page.dev {
+  --gallery-color: #00A1E9;
+}
+
+.gallery-page.other {
+  --gallery-color: #4D4D4D;
+}
+
+.gallery-heading {
+  margin: 0 0 40px;
+  font-size: clamp(3rem, 7vw, 6rem);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.project-card {
+  min-width: 0;
+  padding: 12px;
+
+  background: var(--gallery-color);
+  border: 3px solid rgba(255,255,255,.35);
+  border-radius: 12px;
+
+  text-align: center;
+}
+
+
+/* PORTFOLIO THUMBNAILS */
+
+.project-thumbnail {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+
+  background: #101010;
+  border-radius: 7px;
+}
+
+.project-thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.project-card h2 {
+  margin: 14px 0 4px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.project-card p {
+  margin: 0;
+  font-size: 12px;
+  color: #FFFFFF;
+}
+
+
+/* =========================================
+   PORTFOLIO CATEGORY NAVIGATION
+   ========================================= */
+
+.gallery-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 45px;
+}
+
+.gallery-navigation a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 54px;
+  padding: 12px 22px;
+
+  border: 2px solid #FFFFFF;
+  border-radius: 9px;
+
+  color: #FFFFFF;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+
+  text-align: center;
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+
+/* INDIVIDUAL CATEGORY COLORS */
+
+.gallery-navigation .nav-all {
+  background: #06419D;
+}
+
+.gallery-navigation .nav-creative {
+  background: #4F2683;
+}
+
+.gallery-navigation .nav-dev {
+  background: #00A1E9;
+  color: #FFFFFF;
+}
+
+.gallery-navigation .nav-other {
+  background: #4D4D4D;
+}
+
+/* INTERACTION */
+
+.gallery-navigation a:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.15);
+}
+
+.gallery-navigation a:focus-visible {
+  outline: 3px solid #80DCEA;
+  outline-offset: 4px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .gallery-navigation {
+    display: grid;
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .gallery-navigation a {
+    padding: 12px 10px;
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-navigation a {
+    transition: none;
+  }
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .project-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-page section {
+    padding: 45px 18px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-category-card {
+    min-height: 120px;
+    padding: 22px;
+  }
+
+  .portfolio-category-card .arrow {
+    font-size: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-category-card {
+    transition: none;
+  }
+}
