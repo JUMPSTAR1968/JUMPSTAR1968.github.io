@@ -23,7 +23,7 @@
 }
 
 .column-masthead h1,
-.article-banner h1 {
+.article-banner-title {
   margin: 10px 0;
   font-size: clamp(3rem, 8vw, 7rem);
 }
